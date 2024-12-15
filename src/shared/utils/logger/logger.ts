@@ -1,4 +1,5 @@
-ort DailyRotateFile from 'winston-daily-rotate-file'; // Correct import
+import { createLogger, format, transports } from 'winston';
+import DailyRotateFile from 'winston-daily-rotate-file'; // Correct import
 
 // Define log format
 const { combine, timestamp, printf, colorize } = format;
@@ -13,14 +14,14 @@ const logger = createLogger({
   format: combine(
     colorize(), // Colorize logs for development
     timestamp(), // Add timestamps
-    logFormat // Apply custom format
+    logFormat, // Apply custom format
   ),
   transports: [
     // Log to console
     new transports.Console({
       format: combine(
         colorize(),
-        logFormat // Apply custom format to console logs as well
+        logFormat, // Apply custom format to console logs as well
       ),
     }),
 
@@ -43,14 +44,14 @@ logger.exceptions.handle(
   new transports.File({
     filename: 'logs/exceptions.log',
     format: logFormat, // Apply custom format to exception logs
-  })
+  }),
 );
 
 logger.rejections.handle(
   new transports.File({
     filename: 'logs/rejections.log',
     format: logFormat, // Apply custom format to rejection logs
-  })
+  }),
 );
 
 export default logger;
