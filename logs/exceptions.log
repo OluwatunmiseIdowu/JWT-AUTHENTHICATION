@@ -1,0 +1,156 @@
+2024-12-15T16:41:31.779Z [[31merror[39m]: uncaughtException: tsyringe requires a reflect polyfill. Please add 'import "reflect-metadata"' to the top of your entry point.
+Error: tsyringe requires a reflect polyfill. Please add 'import "reflect-metadata"' to the top of your entry point.
+    at Object.<anonymous> (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/index.js:5:11)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/dist/v1/modules/user/routes/auth.routes.js:4:20)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-12-15T16:42:53.518Z [[31merror[39m]: uncaughtException: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+Error: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:324:23
+    at Array.map (<anonymous>)
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:295:38
+    at InternalDependencyContainer.construct (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:297:11)
+    at InternalDependencyContainer.resolve (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:114:33)
+    at Object.<anonymous> (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/dist/v1/modules/user/routes/auth.routes.js:6:45)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+2024-12-15T16:43:41.262Z [[31merror[39m]: uncaughtException: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+Error: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:324:23
+    at Array.map (<anonymous>)
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:295:38
+    at InternalDependencyContainer.construct (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:297:11)
+    at InternalDependencyContainer.resolve (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:114:33)
+    at Object.<anonymous> (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/dist/v1/modules/user/routes/auth.routes.js:6:45)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+2024-12-15T16:45:37.889Z [[31merror[39m]: uncaughtException: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+Error: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:324:23
+    at Array.map (<anonymous>)
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:295:38
+    at InternalDependencyContainer.construct (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:297:11)
+    at InternalDependencyContainer.resolve (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:114:33)
+    at Object.<anonymous> (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/dist/v1/modules/user/routes/auth.routes.js:6:45)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+2024-12-15T16:48:29.700Z [[31merror[39m]: uncaughtException: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+Error: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:324:23
+    at Array.map (<anonymous>)
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:295:38
+    at InternalDependencyContainer.construct (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:297:11)
+    at InternalDependencyContainer.resolve (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:114:33)
+    at Object.<anonymous> (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/dist/v1/modules/user/routes/auth.routes.js:6:45)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+2024-12-15T16:50:23.486Z [[31merror[39m]: uncaughtException: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+Error: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:324:23
+    at Array.map (<anonymous>)
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:295:38
+    at InternalDependencyContainer.construct (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:297:11)
+    at InternalDependencyContainer.resolve (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:114:33)
+    at Object.<anonymous> (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/dist/v1/modules/user/routes/auth.routes.js:6:45)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+2024-12-15T16:51:29.306Z [[31merror[39m]: uncaughtException: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+Error: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:324:23
+    at Array.map (<anonymous>)
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:295:38
+    at InternalDependencyContainer.construct (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:297:11)
+    at InternalDependencyContainer.resolve (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:114:33)
+    at Object.<anonymous> (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/dist/v1/modules/user/routes/auth.routes.js:6:45)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+2024-12-15T16:52:36.351Z [[31merror[39m]: uncaughtException: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+Error: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:324:23
+    at Array.map (<anonymous>)
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:295:38
+    at InternalDependencyContainer.construct (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:297:11)
+    at InternalDependencyContainer.resolve (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:114:33)
+    at Object.<anonymous> (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/dist/v1/modules/user/routes/auth.routes.js:6:45)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+2024-12-15T16:53:02.946Z [[31merror[39m]: uncaughtException: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+Error: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:324:23
+    at Array.map (<anonymous>)
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:295:38
+    at InternalDependencyContainer.construct (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:297:11)
+    at InternalDependencyContainer.resolve (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:114:33)
+    at Object.<anonymous> (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/dist/v1/modules/user/routes/auth.routes.js:6:45)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+2024-12-15T16:55:35.436Z [[31merror[39m]: uncaughtException: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+Error: Cannot inject the dependency "authService" at position #0 of "AuthController" constructor. Reason:
+    Cannot inject the dependency "userRepository" at position #0 of "AuthService" constructor. Reason:
+        Attempted to resolve unregistered dependency token: "UserRepository"
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:324:23
+    at Array.map (<anonymous>)
+    at /Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:295:38
+    at InternalDependencyContainer.construct (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:297:11)
+    at InternalDependencyContainer.resolve (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/node_modules/tsyringe/dist/cjs/dependency-container.js:114:33)
+    at Object.<anonymous> (/Users/alvin/Documents/projects/JWT-AUTHENTHICATION/dist/v1/modules/user/routes/auth.routes.js:6:45)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
