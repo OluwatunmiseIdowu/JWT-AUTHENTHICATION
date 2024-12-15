@@ -15,7 +15,12 @@ export class UserRepository {
     return this.userRepo.findOne({ where: { email } });
   }
 
-  async createUser(userData: { fullName: string; email: string; password: string }): Promise<User> {
+  async createUser(userData: {
+    first_name: string;
+    last_name: string;
+    email: string;
+    password: string;
+  }): Promise<User> {
     const newUser = this.userRepo.create(userData);
     await this.userRepo.save(newUser);
 

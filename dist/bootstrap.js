@@ -1,23 +1,27 @@
-import AppDataSource from './database';
-import { initializeCustomValidators } from './config/validator.config';
-import logger from './shared/utils/logger/logger';
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const database_1 = __importDefault(require("./database"));
+const validator_config_1 = require("./config/validator.config");
+const logger_1 = __importDefault(require("./shared/utils/logger/logger"));
 const bootstrap = async () => {
     try {
-        await AppDataSource.initialize();
-        logger.info('Database connected successfully.');
+        await database_1.default.initialize();
+        logger_1.default.info('Database connected successfully.');
     }
     catch (error) {
-        logger.error('Error connecting to the database:', error);
+        logger_1.default.error('Error connecting to the database:', error);
         process.exit(1);
     }
 };
 // Initialize custom validators
 const initializeValidators = () => {
-    initializeCustomValidators();
-    logger.info('Custom validators initialized successfully');
+    (0, validator_config_1.initializeCustomValidators)();
+    logger_1.default.info('Custom validators initialized successfully');
 };
-export default async () => {
+exports.default = async () => {
     await bootstrap();
     initializeValidators();
 };
-//# sourceMappingURL=bootstrap.js.map

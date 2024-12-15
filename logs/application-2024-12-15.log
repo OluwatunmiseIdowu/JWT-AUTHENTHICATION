@@ -1,0 +1,29 @@
+2024-12-15T16:57:11.567Z [[32minfo[39m]: Database connected successfully.
+2024-12-15T16:57:11.570Z [[32minfo[39m]: Custom validators initialized successfully
+2024-12-15T16:57:11.577Z [[32minfo[39m]: Server running on port 3000
+2024-12-15T17:00:52.966Z [[32minfo[39m]: Database connected successfully.
+2024-12-15T17:00:52.969Z [[32minfo[39m]: Custom validators initialized successfully
+2024-12-15T17:00:52.971Z [[32minfo[39m]: Server running on port 3000
+2024-12-15T17:02:08.743Z [[32minfo[39m]: Database connected successfully.
+2024-12-15T17:02:08.770Z [[32minfo[39m]: Custom validators initialized successfully
+2024-12-15T17:02:08.791Z [[32minfo[39m]: Server running on port 3000
+2024-12-15T17:05:12.970Z [[32minfo[39m]: Database connected successfully.
+2024-12-15T17:05:12.978Z [[32minfo[39m]: Custom validators initialized successfully
+2024-12-15T17:05:12.986Z [[32minfo[39m]: Server running on port 3000
+2024-12-15T17:06:46.204Z [[32minfo[39m]: Database connected successfully.
+2024-12-15T17:06:46.206Z [[32minfo[39m]: Custom validators initialized successfully
+2024-12-15T17:06:46.212Z [[32minfo[39m]: Server running on port 3000
+2024-12-15T17:07:16.923Z [[32minfo[39m]: Database connected successfully.
+2024-12-15T17:07:16.928Z [[32minfo[39m]: Custom validators initialized successfully
+2024-12-15T17:07:16.931Z [[32minfo[39m]: Server running on port 3000
+2024-12-15T17:07:57.771Z [[32minfo[39m]: Database connected successfully.
+2024-12-15T17:07:57.774Z [[32minfo[39m]: Custom validators initialized successfully
+2024-12-15T17:07:57.778Z [[32minfo[39m]: Server running on port 3000
+2024-12-15T17:08:43.065Z [[32minfo[39m]: Database connected successfully.
+2024-12-15T17:08:43.070Z [[32minfo[39m]: Custom validators initialized successfully
+2024-12-15T17:08:43.071Z [[32minfo[39m]: Server running on port 3000
+2024-12-15T17:08:45.138Z [[31merror[39m]: Error during user registration: User already exists
+2024-12-15T17:09:36.552Z [[32minfo[39m]: Database connected successfully.
+2024-12-15T17:09:36.564Z [[32minfo[39m]: Custom validators initialized successfully
+2024-12-15T17:09:36.593Z [[32minfo[39m]: Server running on port 3000
+2024-12-15T17:09:40.531Z [[31merror[39m]: User already exists

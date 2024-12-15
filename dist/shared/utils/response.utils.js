@@ -1,4 +1,7 @@
-export const SuccessResponse = (message, data, meta) => {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorResponse = exports.SuccessResponse = void 0;
+const SuccessResponse = (message, data, meta) => {
     return {
         status: true,
         message,
@@ -6,7 +9,8 @@ export const SuccessResponse = (message, data, meta) => {
         meta,
     };
 };
-export const ErrorResponse = (message, errors, errorCode) => {
+exports.SuccessResponse = SuccessResponse;
+const ErrorResponse = (message, errors, errorCode) => {
     return {
         status: false,
         message,
@@ -14,4 +18,4 @@ export const ErrorResponse = (message, errors, errorCode) => {
         errors,
     };
 };
-//# sourceMappingURL=response.utils.js.map
+exports.ErrorResponse = ErrorResponse;

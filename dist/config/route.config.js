@@ -1,6 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var RouteVersion;
 (function (RouteVersion) {
-    RouteVersion["v1"] = "/v1";
+    RouteVersion["v1"] = "v1";
 })(RouteVersion || (RouteVersion = {}));
-export default RouteVersion;
-//# sourceMappingURL=route.config.js.map
+exports.default = RouteVersion;

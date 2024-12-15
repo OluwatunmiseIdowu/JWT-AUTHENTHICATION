@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,46 +8,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.User = void 0;
+const typeorm_1 = require("typeorm");
 let User = class User {
-    user_id;
-    first_name;
-    last_name;
-    email;
-    password;
-    created_at;
-    updated_at;
 };
+exports.User = User;
 __decorate([
-    PrimaryGeneratedColumn('uuid'),
+    (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
     __metadata("design:type", String)
 ], User.prototype, "user_id", void 0);
 __decorate([
-    Column({ type: 'varchar', length: 100 }),
+    (0, typeorm_1.Column)({ type: 'varchar', length: 100 }),
     __metadata("design:type", String)
 ], User.prototype, "first_name", void 0);
 __decorate([
-    Column({ type: 'varchar', length: 100 }),
+    (0, typeorm_1.Column)({ type: 'varchar', length: 100 }),
     __metadata("design:type", String)
 ], User.prototype, "last_name", void 0);
 __decorate([
-    Column({ type: 'varchar', unique: true }),
+    (0, typeorm_1.Column)({ type: 'varchar', unique: true }),
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
 __decorate([
-    Column({ type: 'varchar' }),
+    (0, typeorm_1.Column)({ type: 'varchar' }),
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
-    CreateDateColumn(),
+    (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], User.prototype, "created_at", void 0);
 __decorate([
-    UpdateDateColumn(),
+    (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
 ], User.prototype, "updated_at", void 0);
-User = __decorate([
-    Entity('users')
+exports.User = User = __decorate([
+    (0, typeorm_1.Entity)('users')
 ], User);
-export { User };
-//# sourceMappingURL=User.js.map

@@ -1,2 +1,2 @@
-export {};
-//# sourceMappingURL=object-literal.type.js.map
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });

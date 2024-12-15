@@ -1,9 +1,12 @@
-import { isUUID } from 'validator';
-export const validateIdParams = (req, res, next) => {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.validateIdParams = void 0;
+const validator_1 = require("validator");
+const validateIdParams = (req, res, next) => {
     const { id } = req.params;
-    if (!isUUID(id)) {
+    if (!(0, validator_1.isUUID)(id)) {
         return res.status(400).json({ message: 'Invalid ID parameter.' });
     }
     next();
 };
-//# sourceMappingURL=validate-id-params.middleware.js.map
+exports.validateIdParams = validateIdParams;

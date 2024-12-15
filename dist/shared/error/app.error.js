@@ -1,8 +1,6 @@
-export default class AppError extends Error {
-    statusCode;
-    errorCode;
-    isOperational;
-    cause;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class AppError extends Error {
     constructor(statusCode, message, cause, errorCode, isOperational = true) {
         super(message);
         this.statusCode = statusCode;
@@ -12,4 +10,4 @@ export default class AppError extends Error {
         Error.captureStackTrace(this, this.constructor);
     }
 }
-//# sourceMappingURL=app.error.js.map
+exports.default = AppError;

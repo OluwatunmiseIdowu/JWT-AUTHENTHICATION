@@ -1,8 +1,7 @@
-export class Result {
-    isSuccess;
-    isFailure;
-    value;
-    error;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Result = void 0;
+class Result {
     constructor(isSuccess, value, error) {
         this.isSuccess = isSuccess;
         this.isFailure = !isSuccess;
@@ -20,4 +19,4 @@ export class Result {
         return new Result(false, null, error);
     }
 }
-//# sourceMappingURL=result.utils.js.map
+exports.Result = Result;

@@ -1,23 +1,28 @@
-import { createLogger, format, transports } from 'winston';
-import DailyRotateFile from 'winston-daily-rotate-file'; // Correct import
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const winston_1 = require("winston");
+const winston_daily_rotate_file_1 = __importDefault(require("winston-daily-rotate-file")); // Correct import
 // Define log format
-const { combine, timestamp, printf, colorize } = format;
+const { combine, timestamp, printf, colorize } = winston_1.format;
 // Custom log format
 const logFormat = printf(({ level, message, timestamp }) => {
     return `${timestamp} [${level}]: ${message}`;
 });
 // Configure logger
-const logger = createLogger({
+const logger = (0, winston_1.createLogger)({
     format: combine(colorize(), // Colorize logs for development
     timestamp(), // Add timestamps
     logFormat),
     transports: [
         // Log to console
-        new transports.Console({
+        new winston_1.transports.Console({
             format: combine(colorize(), logFormat),
         }),
         // Log to file (daily rotation)
-        new DailyRotateFile({
+        new winston_daily_rotate_file_1.default({
             // Use DailyRotateFile directly
             filename: 'logs/application-%DATE%.log',
             datePattern: 'YYYY-MM-DD',
@@ -30,13 +35,12 @@ const logger = createLogger({
     exitOnError: false, // Do not exit on handled exceptions
 });
 // Log uncaught exceptions and unhandled rejections
-logger.exceptions.handle(new transports.File({
+logger.exceptions.handle(new winston_1.transports.File({
     filename: 'logs/exceptions.log',
     format: logFormat, // Apply custom format to exception logs
 }));
-logger.rejections.handle(new transports.File({
+logger.rejections.handle(new winston_1.transports.File({
     filename: 'logs/rejections.log',
     format: logFormat, // Apply custom format to rejection logs
 }));
-export default logger;
-//# sourceMappingURL=logger.js.map
+exports.default = logger;

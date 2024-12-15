@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,13 +8,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { injectable } from 'tsyringe';
-import { User } from '../../../../database/entities/User';
-import AppDataSource from '../../../../database';
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserRepository = void 0;
+const tsyringe_1 = require("tsyringe");
+const User_1 = require("../../../../database/entities/User");
+const database_1 = __importDefault(require("../../../../database"));
 let UserRepository = class UserRepository {
-    userRepo;
     constructor() {
-        this.userRepo = AppDataSource.getRepository(User);
+        this.userRepo = database_1.default.getRepository(User_1.User);
     }
     async findOneByEmail(email) {
         return this.userRepo.findOne({ where: { email } });
@@ -24,9 +29,8 @@ let UserRepository = class UserRepository {
         return newUser;
     }
 };
-UserRepository = __decorate([
-    injectable(),
+exports.UserRepository = UserRepository;
+exports.UserRepository = UserRepository = __decorate([
+    (0, tsyringe_1.injectable)(),
     __metadata("design:paramtypes", [])
 ], UserRepository);
-export { UserRepository };
-//# sourceMappingURL=user.repository.js.map

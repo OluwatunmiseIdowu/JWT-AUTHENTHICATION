@@ -11,13 +11,13 @@ export class AuthController {
 
   async register(req: Request, res: Response): Promise<any> {
     try {
-      const { fullName, email, password } = req.body;
-      const user = await this.authService.registerUser({ fullName, email, password });
+      const { first_name, last_name, email, password } = req.body;
+      const user = await this.authService.registerUser({ first_name, last_name, email, password });
       return res.status(201).send(SuccessResponse('User created successfully', user));
     } catch (error) {
       if (error instanceof AppError) {
-        logger.error('Error during user registration:', error);
-        return res.status(500).send(ErrorResponse('Internal server error'));
+        logger.error(error.message);
+        return res.status(error.statusCode).send(ErrorResponse(error.message, undefined, error.errorCode));
       }
     }
   }

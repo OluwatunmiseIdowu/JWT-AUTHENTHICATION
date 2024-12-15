@@ -1,46 +1,24 @@
-import 'reflect-metadata';
-import express from 'express';
-import { DataSource } from 'typeorm';
-import { User } from './entities/User';
-import appConfig from '../config/app.config';
-console.log(appConfig);
-export const app = express();
-const AppDataSource = new DataSource({
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+require("reflect-metadata");
+const path_1 = __importDefault(require("path"));
+const typeorm_1 = require("typeorm");
+const User_1 = require("./entities/User");
+const app_config_1 = __importDefault(require("../config/app.config"));
+const AppDataSource = new typeorm_1.DataSource({
     type: 'postgres',
-    host: appConfig.db.host || 'localhost',
-    port: parseInt(appConfig.db.port, 10) || 5432,
-    username: appConfig.db.username || 'postgres',
-    password: appConfig.db.password || 'password',
-    database: appConfig.db.name || 'mydatabase',
-    synchronize: true,
+    host: app_config_1.default.db.host || 'localhost',
+    port: parseInt(app_config_1.default.db.port, 10) || 5432,
+    username: app_config_1.default.db.username || 'postgres',
+    password: app_config_1.default.db.password || 'password',
+    database: app_config_1.default.db.name || 'mydatabase',
+    synchronize: false,
     logging: true,
-    entities: [User],
-    migrations: ['src/migrations/*.ts'],
+    entities: [User_1.User],
+    migrations: [path_1.default.join(__dirname, '../database/migrations/*.ts')],
     subscribers: [],
 });
-export default AppDataSource;
-// async function connectToDatabase() {
-//   try {
-//     await AppDataSource.initialize();
-//     console.log("Connection to the database has been established successfully.");
-//   } catch (error) {
-//     console.error("Unable to connect to the database:", error);
-//   }
-// }
-// import { AppDataSource } from "./data-source";
-// AppDataSource.initialize()
-//   .then(() => {
-//     console.log("Data Source has been initialized!");
-//     // Start your server here
-//   })
-//   .catch((err) => {
-//     console.error("Error during Data Source initialization", err);
-//   });
-// connectToDatabase();
-// app.use(express.json());
-// app.use("/auth", authRouter);
-// app.use("/user", userRouter);
-// app.listen(3000, () => {
-//   console.log("Server is running on port 3000");
-// });
-//# sourceMappingURL=index.js.map
+exports.default = AppDataSource;

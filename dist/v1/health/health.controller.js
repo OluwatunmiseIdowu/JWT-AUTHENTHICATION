@@ -1,7 +1,10 @@
-export const healthCheck = (req, res) => {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.healthCheck = void 0;
+const healthCheck = (req, res) => {
     res.status(200).json({
         status: 'UP',
         timestamp: new Date(),
     });
 };
-//# sourceMappingURL=health.controller.js.map
+exports.healthCheck = healthCheck;
