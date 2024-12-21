@@ -1,3 +1,8 @@
+import app from './app';
+import logger from './shared/utils/logger/logger';
+import 'reflect-metadata';
+import bootstrap from './bootstrap';
+import appConfig from './config/app.config';
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };

@@ -1,3 +1,11 @@
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import RouteVersion from './config/route.config';
+import 'reflect-metadata';
+import { healthRoutes } from './v1/health/health.route'; // Company's health check routes
+import { appRoutes } from './v1/app/app.routes'; // Company's app routes
+import authRouter from './v1/modules/user/routes/auth.routes';
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };

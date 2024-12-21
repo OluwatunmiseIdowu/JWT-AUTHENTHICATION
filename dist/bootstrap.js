@@ -1,3 +1,6 @@
+import AppDataSource from './database';
+import { initializeCustomValidators } from './config/validator.config';
+import logger from './shared/utils/logger/logger';
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
