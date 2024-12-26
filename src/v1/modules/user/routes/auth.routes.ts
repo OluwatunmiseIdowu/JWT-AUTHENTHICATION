@@ -7,6 +7,7 @@ const authRouter = Router();
 
 // Authentication routes
 authRouter.post('/auth/register', authController.register.bind(authController));
-//   .post('/login', authController.login.bind(authController));
+authRouter.post('/auth/login', authController.login.bind(authController)); // Adding login route
+authRouter.get('/auth/user/:id', authController.getUser.bind(authController)); // Adding fetch user route
 
 export default authRouter;
