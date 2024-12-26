@@ -22,48 +22,48 @@ export class AuthController {
     }
   }
 
-  // // Login a user
-  // async login (req: Request, res: Response) => {
-  //   const { email, password } = req.body;
+  // Login a user
+  async login(req: Request, res: Response): Promise<any> {
+    const { email, password } = req.body;
 
-  //   try {
-  //     // Find user by email
-  //     const existingUser = await userRepository.findOneBy({ email });
-  //     if (!existingUser) {
-  //       return res.status(404).json({ message: 'User not found' });
-  //     }
+    try {
+      // Find user by email
+      const existingUser = await this.authService.findUserByEmail(email); // Ensure this method exists in AuthService
+      if (!existingUser) {
+        return res.status(404).send(ErrorResponse('User not found'));
+      }
 
-  //     // Compare the password
-  //     const isValidPassword = await bcrypt.compare(password, existingUser.password);
-  //     if (!isValidPassword) {
-  //       return res.status(401).json({ message: 'Invalid password' });
-  //     }
+      // Compare the password
+      const isValidPassword = await bcrypt.compare(password, existingUser.password);
+      if (!isValidPassword) {
+        return res.status(401).send(ErrorResponse('Invalid password'));
+      }
 
-  //     // Generate JWT token
-  //     const token = createToken(existingUser.id);
+      // Generate JWT token
+      const token = createToken(existingUser.id);
 
-  //     res.status(200).json({ token });
-  //   } catch (error) {
-  //     console.error('Error during user login:', error);
-  //     res.status(500).json({ message: 'Internal server error' });
-  //   }
-  // };
+      return res.status(200).send(SuccessResponse('Login successful', { token }));
+    } catch (error) {
+      logger.error('Error during user login:', error);
+      return res.status(500).send(ErrorResponse('Internal server error'));
+    }
+  }
 
-  // // Get user by ID
-  // async getUser (req: Request, res: Response) => {
-  //   const { id } = req.params;
+  // Get user by ID
+  async getUser(req: Request, res: Response): Promise<any> {
+    const { id } = req.params;
 
-  //   try {
-  //     // Find user by ID
-  //     const user = await userRepository.findOneBy({ id: parseInt(id) });
-  //     if (!user) {
-  //       return res.status(404).json({ message: 'User not found' });
-  //     }
+    try {
+      // Find user by ID
+      const user = await this.authService.findUserById(parseInt(id)); // Ensure this method exists in AuthService
+      if (!user) {
+        return res.status(404).send(ErrorResponse('User not found'));
+      }
 
-  //     res.status(200).json(user);
-  //   } catch (error) {
-  //     console.error('Error fetching user:', error);
-  //     res.status(500).json({ message: 'Internal server error' });
-  //   }
-  // }
+      return res.status(200).send(SuccessResponse('User fetched successfully', user));
+    } catch (error) {
+      logger.error('Error fetching user:', error);
+      return res.status(500).send(ErrorResponse('Internal server error'));
+    }
+  }
 }
